@@ -1,0 +1,16 @@
+{
+  "name": "socket-qr-wa",
+  "version": "1.0.0",
+  "description": "simple socket io qr wa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "whatsapp-web.js": "^1.25.0"
+  }
+}

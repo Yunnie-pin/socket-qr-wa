@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code WhatsApp</title>
+</head>
+<body>
+    <h1>Scan QR Code WhatsApp</h1>
+    <img id="qr-code" alt="QR Code will appear here" />
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+        const socket = io();
+
+        // Menerima QR code secara real-time
+        socket.on('qr', (qr) => {
+            console.log('QR Code diterima:', qr);
+            const qrCodeElement = document.getElementById('qr-code');
+
+            // Menggunakan API untuk menampilkan QR code
+            qrCodeElement.src = `https://api.qrserver.com/v1/create-qr-code/?data=${qr}&size=200x200`;
+        });
+    </script>
+</body>
+</html>
